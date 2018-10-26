@@ -1,10 +1,9 @@
 package main
 
 import (
+	"flag"
 	"fmt"
-	"os"
 	"strconv"
-	"strings"
 	"time"
 
 	"github.com/oliverdunk/adventofcode-go/utils"
@@ -25,7 +24,10 @@ func main() {
 }
 
 func getDesiredPuzzle() (int, int) {
-	if len(os.Args) > 1 && strings.Compare(os.Args[1], "-today") == 0 {
+	todayPtr := flag.Bool("today", false, "If today's puzzle should be selected automatically")
+	flag.Parse()
+
+	if *todayPtr {
 		date := time.Now()
 
 		if date.Month() == 12 {
