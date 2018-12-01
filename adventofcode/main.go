@@ -7,7 +7,7 @@ import (
 	"time"
 
 	"github.com/oliverdunk/adventofcode-go/utils"
-	"github.com/oliverdunk/adventofcode-go/year2017"
+	"github.com/oliverdunk/adventofcode-go/year2018"
 )
 
 var puzzles = make(map[int]map[int]func(string) string)
@@ -44,8 +44,8 @@ func getDesiredPuzzle() (int, int) {
 }
 
 func loadPuzzles() {
-	puzzles[2017] = make(map[int]func(string) string)
-	puzzles[2017][6] = year2017.DaySix
+	puzzles[2018] = make(map[int]func(string) string)
+	puzzles[2018][1] = year2018.DayOne
 }
 
 func runPuzzle(year int, day int) {
