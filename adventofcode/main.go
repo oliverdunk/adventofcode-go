@@ -66,9 +66,9 @@ func runPuzzle(year int, day int) {
 
 	start := unixTimestamp()
 	result := puzzles[year][day](puzzleInput)
-	fmt.Printf("🏁 Result: %s (took %dms)\n", result, (unixTimestamp() - start))
+	fmt.Printf("🏁 Result: %s (took %fms)\n", result, (unixTimestamp() - start))
 }
 
-func unixTimestamp() int64 {
-	return time.Now().UnixNano() / 1000000
+func unixTimestamp() float64 {
+	return float64(time.Now().UnixNano()) / 1000000
 }
