@@ -46,6 +46,7 @@ func getDesiredPuzzle() (int, int) {
 func loadPuzzles() {
 	puzzles[2018] = make(map[int]func(string) string)
 	puzzles[2018][1] = year2018.DayOne
+	puzzles[2018][2] = year2018.DayTwo
 }
 
 func runPuzzle(year int, day int) {
